@@ -1,0 +1,287 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 54px;
+    position: fixed;
+    background-color: rgb(0, 0, 0, 0.8);
+    z-index: 2;
+}
+
+header img{
+    width: 80px;
+}
+
+
+.welcome{
+    width: 100%;
+    height: 460px;
+    background-size: 400px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url(/assets/images/upscale.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 20px;
+    padding-top: 100px;
+ 
+}
+
+.text-welcome p:nth-child(1){
+
+    font-size: 2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    color: white;
+    animation: ParaEsquerda;
+    animation-timeline: scroll();
+    
+}
+
+.text-welcome p:nth-child(2){
+    font-size: 5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    color: white;
+    animation: ParaDireita;
+    animation-timeline: scroll();
+}
+
+.text-welcome{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    justify-content: center;
+
+}
+
+.agenda{
+    display: flex;
+    flex-direction: column;
+    font-family:Poppins;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height:400px;
+
+}
+
+.agenda h2:nth-child(1){
+    animation: SurgirDireitaEsquerda linear;
+    animation-timeline: view();
+}
+.agenda h2:nth-child(2){
+    animation: SurgirEsquerdaDireita linear;
+    animation-timeline: view();
+}
+
+.agenda-shows-item{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.agenda-shows-item button{
+    
+    background-color: yellow;
+    padding: 6px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 4px;
+}
+
+.agenda-shows-item-local p:nth-child(2){
+    color: lightslategrey;
+}
+
+
+
+
+.midia{
+    width: 100%;
+    background-color: black;
+}
+
+.midia h2{
+    color: white;
+    padding: 20px;
+    font-family: Poppins;
+    animation: Sugir ;
+    animation-timeline: view();
+}
+
+.midia ul li img{
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+}
+
+.midia ul{
+    display: flex;
+    display: inline-block; 
+    animation: RolamentoInfinitoParaEsquerda 100s linear infinite; /* Duração e tipo da animação */
+}
+
+.midia ul li{
+    display: inline; 
+}
+
+
+.rolamento{
+    overflow: hidden; 
+    white-space: nowrap; 
+    width: 100%; 
+}
+
+.shop{
+    background-color: black;
+    padding: 20px;
+}
+
+.container-shop-item{
+    display: flex;
+    gap: 20px;
+}
+
+.shop h2{
+    color: white;
+    font-family: Poppins;
+    animation: Sugir ;
+    animation-timeline: view();
+    padding-bottom: 20px;
+    
+}
+
+
+
+.shop-item img{
+    width: 150px;
+    height: 200px;
+    border-radius: 8px;
+}
+
+.shop-item-descriptions{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 6px;
+}
+
+.shop-item-descriptions p:nth-child(1){
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.shop-item-descriptions p:nth-child(2){
+    font-family: Poppins;
+    color: gray;
+    font-size: .8rem;
+}
+
+.shop-item button{
+    padding: 4px;
+    border: none;
+    border-radius: 6px;
+    background-color: yellow;
+    margin-left: 6px;
+}
+
+
+.music{
+    background: black;
+}
+
+.music h2{
+    
+        color: white;
+        font-family: Poppins;
+        animation: Sugir ;
+        animation-timeline: view();
+        padding-bottom: 20px;
+        
+    
+}
+
+
+
+
+@keyframes ParaEsquerda{
+    from{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to{
+        opacity: 0;
+        transform: translateX(200px);
+    }
+}
+
+@keyframes ParaDireita{
+    from{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to{
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+}
+
+@keyframes Sugir{
+    0%{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes SurgirDireitaEsquerda{
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    70%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes SurgirEsquerdaDireita{
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    70%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes RolamentoInfinitoParaEsquerda {
+    0% {
+        transform: translateX(0); /* Início da animação */
+    }
+    100% {
+        transform: translateX(-100%); /* Fim da animação, movendo tudo para a esquerda */
+    }
+}
+
+@keyframes FadeIn{
+    to {
+        scale:1
+    }from{
+        opacity: 1;
+    }
+}
