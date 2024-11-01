@@ -47,7 +47,7 @@ header img{
 .text-welcome p:nth-child(1){
 
     font-size: 2rem;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Anton;
     font-weight: bold;
     color: white;
     animation:EsquerdaPraDireita;
@@ -58,7 +58,7 @@ header img{
 
 .text-welcome p:nth-child(2){
     font-size: 5rem;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Anton;
     font-weight: bold;
     color: white;
     animation: ParaDireita;
@@ -80,7 +80,7 @@ header img{
 
 .text-welcome ul {
     display: flex;
-    color: gray;
+    color: lightgray;
     list-style: none;
     font-family: Poppins;
     gap: 20px;
