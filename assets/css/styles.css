@@ -26,22 +26,20 @@ header img{
     background-size: 400px;
     background-repeat: no-repeat;
     background-position: top;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url(assets/images/upscale.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url(/assets/images/upscale.jpg);
     background-size: cover;
     background-attachment: fixed;
     padding: 20px;
     padding-top: 100px;
     animation: FadeOut linear;
     animation-timeline: scroll();
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
-.welcome iframe{
-    height: 240px;
-}
 
-.text-welcome ul {
-    display:none;
-}
+
 
 
 
@@ -77,6 +75,29 @@ header img{
     display: flex;
     flex-direction: column;
 }
+
+
+
+.text-welcome ul {
+    display: flex;
+    color: gray;
+    list-style: none;
+    font-family: Poppins;
+    gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.text-welcome ul li{
+    border: 1px solid gray;
+    padding: 6px;
+    border-radius: 6px;
+    font-size: .8rem;
+}
+
+
+
 
  .social{
     overflow: hidden;  /* Hide overflow to make the scroll effect smoother */
@@ -119,7 +140,7 @@ header img{
     flex-direction: column;
     font-family:Poppins;
     padding: 20px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.9);
     color: white;
     width: 100%;
     height:400px;
@@ -281,7 +302,7 @@ header img{
 }
 
 .mais iframe{
-    width: 100vw;
+    width: 100;
 }
 
 .mais h2{
@@ -292,28 +313,38 @@ header img{
 }
 
     @keyframes EsquerdaPraDireita{
-        from{
+        0%{
             transform: translateX(0%);
+            opacity: 1;
           
         }
-        to {
+        10%{
+            opacity: 0;
+        }
+        100% {
             transform: translateX(100%);
-            opacity: 1;
+           
           
         }
     }
 
 
     @keyframes DireitaPraEsquerda{
-        from{
+        0%{
             transform: translateX(0%);
           
         }
-        to {
+        10%{
+            opacity: 0;
+           
+        }
+
+        30%{
             transform: translateX(-100%);
             opacity: 1;
-          
-        }
+        } 
+       
+      
     }
 
 
@@ -338,7 +369,7 @@ header img{
 
 
 
-@media (min-width: 993px){
+@media (min-width: 993px ){
     
     .agenda{
         align-items: center;
@@ -348,11 +379,14 @@ header img{
         gap: 40px;
     }
 
+    .welcome{
+        flex-direction: row;
+    }
     
 
    
        
-    }
+    
 
     .agenda-shows-item{
         border: 1px solid gray;
@@ -391,14 +425,9 @@ header img{
         list-style: none;
         font-family: Poppins;
         gap: 20px;
+    
     }
     
-    .text-welcome ul li{
-        border: 1px solid gray;
-        padding: 6px;
-        border-radius: 6px;
-        font-size: .8rem;
-    }
     
  
 
@@ -418,4 +447,3 @@ header img{
         text-align: center;
         font-size: .8rem;
     }
-}
